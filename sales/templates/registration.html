@@ -1,0 +1,12 @@
+{%  extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block 'title' %} hi {% endblock %}
+{% block 'body1' %}
+<form method="post">
+<table>
+{{ form|crispy}}
+</table>
+<button name="register" class="btn btn-primary" value="register" formnovalidate >Register</button>
+ {% csrf_token %}
+    </form>
+{% endblock %}
